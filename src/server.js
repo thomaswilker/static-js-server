@@ -13,7 +13,8 @@
   var app = express();
   var args = { url : 'https://openlearnware.tu-darmstadt.de', port : '3000'};
 
-  var getArgPos = (k) => process.argv.indexOf('-' + k);
+  console.log(process.argv);
+  var getArgPos = (k) => process.argv.indexOf('--' + k);
 
   for(let k in args) {
     if(getArgPos(k) !== -1) {
